@@ -16,7 +16,14 @@ class eventosController
 {
     public function agregarEvento($request, $response, $args)
     {
-
-        return $response->withJson("ressssss", 200);
+        
+        $parametros = $request->getParsedBody();
+        $var = $parametros["fecha"];
+        $fecha = date("Y-m-d H:i", strtotime($var));
+        $evento=new evento;
+        $evento->usuario_id=1;
+        $evento->fecha=$fecha;
+        $evento->save();
+        return $response->withJson("Evento guardado con exito", 200);
     }
 }

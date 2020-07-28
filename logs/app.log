@@ -248,3 +248,13 @@
 [2020-07-29 00:36:55] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"95d464a"}
 [2020-07-29 00:37:04] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"2d35fcd"}
 [2020-07-29 00:37:11] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"687de6d"}
+[2020-07-29 00:39:59] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"6eadeab"}
+[2020-07-29 00:40:16] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"9772f0e"}
+[2020-07-29 00:40:41] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"069f05e"}
+[2020-07-29 00:40:48] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"49be977"}
+[2020-07-29 00:40:57] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"0dc82dc"}
+[2020-07-29 00:41:40] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"d710db5"}
+[2020-07-29 00:42:05] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"ab2d115"}
+[2020-07-29 00:43:11] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"cb647bb"}
+[2020-07-29 00:46:24] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"9d075dc"}
+[2020-07-29 00:46:48] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"fa26988"}
