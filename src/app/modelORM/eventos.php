@@ -5,7 +5,7 @@ namespace App\Models\ORM;
 use Psr\Http\Message\ServerRequestInterface as Request;
 
 
-class tipoMascota extends \Illuminate\Database\Eloquent\Model {  
-  
+class evento extends \Illuminate\Database\Eloquent\Model {  
     public $timestamps = false;
+
 }

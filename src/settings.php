@@ -30,7 +30,7 @@ return [
         'db' => [
            'driver' => 'mysql',
             'host' => 'localhost',
-            'database' => 'practicafinal',
+            'database' => 'final',
             'username' => 'root',
             'password' => '',
             'charset'   => 'utf8',
