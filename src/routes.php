@@ -15,7 +15,6 @@ return function (App $app) {
     $routes = require __DIR__ . '/../src/routes/routesPDO.php';
     $routes($app);
     
-
     // Rutas ORM
     $routes = require __DIR__ . '/../src/routes/routesORM.php';
     $routes($app);
@@ -24,15 +23,8 @@ return function (App $app) {
     $routes = require __DIR__ . '/../src/routes/routesJWT.php';
     $routes($app);
 
-
-    $app->get('/[{name}]', function (Request $request, Response $response, array $args) use ($container) {
-        // Sample log message
-        $container->get('logger')->info("Slim-Skeleton '/' route");
-        // $container->get('logger')->addCritical('Hey, a critical log entry!');
-        return $container->get('renderer')->render($response, 'index.phtml', $args);
-    });
-
-
-
+    // Rutas FINAL
+    $routes = require __DIR__ . '/../src/routes/routesFinal.php';
+    $routes($app);
 
 };

@@ -4,6 +4,12 @@ use Slim\App;
 use Slim\Http\Request;
 use Slim\Http\Response;
 
+use App\Models\AutentificadorJWT;
+//use App\Models\ORM\logs;
+
+//include_once __DIR__ . '/app/modelORM/logs.php';
+include_once __DIR__ . '/app/modelAPI/IApiControler.php';
+include_once __DIR__ . '/app/modelAPI/AutentificadorJWT.php';
 return function (App $app) {
   
   	$container = $app->getContainer();
@@ -110,3 +116,63 @@ function detect()
 	        ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS');
 	});
 };
+
+
+
+class Middleware{
+	public function validarToken($request, $response, $next)
+	{
+		$token=$request->getHeader('token');
+		
+		if($token != null)
+		{
+			
+			try{
+				if(AutentificadorJWT::VerificarToken($token[0])){
+					// $newResponse = $response->withJson("ta piola el token",200);
+					$newResponse = $next($request,$response);
+					var_dump($newResponse);
+				}
+			}
+			catch(Exception $e)
+			{
+			 	$newResponse = $response->withJson("Token invalido",200);
+			}
+		}
+		else
+		{
+			$newResponse = $response->withJson("Token no recibido",200);
+		}
+        return $newResponse;
+	}
+	// public function log($request, $response, $next)
+	// {
+	// 	$token = $request->getHeader('token');
+	// 	$usuario = "";
+		
+	// 	if (count((array)$token) > 0) {
+	// 		try {
+	// 			$data = AutentificadorJWT::ObtenerData($token[0]);
+	// 			if ($data->user != null) {
+	// 				$usuario = $data->user;
+	// 			}
+	// 		} catch (Exception $e) {
+	// 			$newResponse = $response->withJson("Token invalido", 200);
+	// 		}
+	// 	}
+	// 	$ruta = $request->getRequestTarget();
+	// 	$metodo = $request->getMethod();
+	// 	$ip = $request->getServerParam('REMOTE_ADDR');
+	// 	$fecha = date('Y-m-d H:i:s', $request->getServerParam('REQUEST_TIME'));
+
+	// 	$log = new logs;
+	// 	$log->ruta = $ruta;
+	// 	$log->metodo = $metodo;
+	// 	$log->usuario = $usuario;
+	// 	$log->ip = $ip;
+	// 	$log->fecha = $fecha;
+	// 	$log->save();
+	// 	$newResponse = $next($request, $response);
+	// 	return $newResponse;
+	// }
+}
