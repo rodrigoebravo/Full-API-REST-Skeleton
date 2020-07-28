@@ -239,3 +239,12 @@
 [2020-07-29 00:22:29] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=login, autoridad=127.0.0.1%3A8080 [] {"uid":"5aa1f75"}
 [2020-07-29 00:22:34] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=login, autoridad=127.0.0.1%3A8080 [] {"uid":"7bc4295"}
 [2020-07-29 00:22:36] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=login, autoridad=127.0.0.1%3A8080 [] {"uid":"12d7b6c"}
+[2020-07-29 00:34:19] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"14675a6"}
+[2020-07-29 00:35:03] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"5732523"}
+[2020-07-29 00:35:32] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"23e73e5"}
+[2020-07-29 00:35:50] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"074b642"}
+[2020-07-29 00:36:07] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"e884f5a"}
+[2020-07-29 00:36:32] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventosController, autoridad=127.0.0.1%3A8080 [] {"uid":"9fc8b77"}
+[2020-07-29 00:36:55] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"95d464a"}
+[2020-07-29 00:37:04] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"2d35fcd"}
+[2020-07-29 00:37:11] UTN FRA LOGGER.INFO: metodo=POST, URI=http%3A%2F%2F127.0.0.1%3A8080%2Fparcial, RUTA=eventos, autoridad=127.0.0.1%3A8080 [] {"uid":"687de6d"}
