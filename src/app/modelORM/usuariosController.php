@@ -159,7 +159,7 @@ class usuariosController
         {
             $u=array("idUsuario"=>$usuarioExiste["id"]);
             $token = AutentificadorJWT::CrearToken($u);
-            return $response->withJson($token, 200);
+            return $response->withJson(array("token"=>$token), 200);
         }
         return $response->withJson("Clave incorrecta.", 200);
         

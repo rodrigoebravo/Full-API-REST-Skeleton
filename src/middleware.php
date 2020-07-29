@@ -131,7 +131,6 @@ class Middleware{
 				if(AutentificadorJWT::VerificarToken($token[0])){
 					// $newResponse = $response->withJson("ta piola el token",200);
 					$newResponse = $next($request,$response);
-					var_dump($newResponse);
 				}
 			}
 			catch(Exception $e)

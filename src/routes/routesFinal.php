@@ -16,13 +16,11 @@ return function (App $app) {
         $this->post('/users', usuariosController::class . ':registrar');
         $this->post('/login', usuariosController::class . ':login');
 
-        $this->post('/eventos', eventosController::class . ':agregarEvento');//->add(Middleware::class . ":validarToken");
+        $this->post('/eventos', eventosController::class . ':agregarEvento')->add(Middleware::class . ":validarToken");
 
-        // $this->get('/eventos', eventosController::class . ':login')->add(Middleware::class . ":validarToken");
-        // $this->put('/eventos/{id}', eventosController::class . ':login')->add(Middleware::class . ":validarToken");
+        $this->get('/eventos', eventosController::class . ':traerEventos')->add(Middleware::class . ":validarToken");
 
-        // $this->put('/users', eventosController::class . ':login')->add(Middleware::class . ":validarToken");
-        // $this->post('/login', eventosController::class . ':login')->add(Middleware::class . ":validarToken");
-        // $this->post('/login', eventosController::class . ':login')->add(Middleware::class . ":validarToken");
+        $this->put('/eventos/{id}', eventosController::class . ':modificarEvento')->add(Middleware::class . ":validarToken");
+        $this->post('/userss', eventosController::class . ':cargarImagen')->add(Middleware::class . ":validarToken");
     });
 };
