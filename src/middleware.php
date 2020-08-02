@@ -144,34 +144,37 @@ class Middleware{
 		}
         return $newResponse;
 	}
-	// public function log($request, $response, $next)
-	// {
-	// 	$token = $request->getHeader('token');
-	// 	$usuario = "";
+	public function log($request, $response, $next)
+	{
+		$token = $request->getHeader('token');
+		$usuario = "";
 		
-	// 	if (count((array)$token) > 0) {
-	// 		try {
-	// 			$data = AutentificadorJWT::ObtenerData($token[0]);
-	// 			if ($data->user != null) {
-	// 				$usuario = $data->user;
-	// 			}
-	// 		} catch (Exception $e) {
-	// 			$newResponse = $response->withJson("Token invalido", 200);
-	// 		}
-	// 	}
-	// 	$ruta = $request->getRequestTarget();
-	// 	$metodo = $request->getMethod();
-	// 	$ip = $request->getServerParam('REMOTE_ADDR');
-	// 	$fecha = date('Y-m-d H:i:s', $request->getServerParam('REQUEST_TIME'));
+		if (count((array)$token) > 0) {
+			try {
+				$data = AutentificadorJWT::ObtenerData($token[0]);
+				
+				if ($data->idUsuario != null) {
+					$usuario = $data->idUsuario;
+				}
+			} catch (Exception $e) {
+				$newResponse = $response->withJson("Token invalido", 200);
+			}
+		}
+		$ruta = $request->getRequestTarget();
+		$metodo = $request->getMethod();
+		$ip = $request->getServerParam('REMOTE_ADDR');
+		$fecha = date('Y-m-d H:i:s', $request->getServerParam('REQUEST_TIME'));
 
-	// 	$log = new logs;
-	// 	$log->ruta = $ruta;
-	// 	$log->metodo = $metodo;
-	// 	$log->usuario = $usuario;
-	// 	$log->ip = $ip;
-	// 	$log->fecha = $fecha;
-	// 	$log->save();
-	// 	$newResponse = $next($request, $response);
-	// 	return $newResponse;
-	// }
+		$info=array();
+		$info["metodo"]=$request->getMethod();
+		$info["URI"]=$request->getUri()->getBaseUrl();
+		$info["RUTA"]=$request->getUri()->getPath();
+		$info["Hora"]=$fecha;
+
+		$file = fopen("./log/log.txt", "w");
+		fwrite($file, json_encode($info));
+		fclose($file);
+
+	   return $next($request, $response);
+	}
 }
